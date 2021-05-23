@@ -4,13 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "lite-server",
-    "test": "jest"
+    "test": "jest",
+    "test:watch": "jest --watchAll",
+    "dev": "parcel ./src/index.html",
+    "build": "parcel build ./src/index.html"
   },
   "author": "Jose A. Peralta",
   "license": "ISC",
   "devDependencies": {
     "jest": "^26.6.3",
-    "lite-server": "^2.6.1"
+    "parcel-bundler": "^1.12.5"
   }
 }
