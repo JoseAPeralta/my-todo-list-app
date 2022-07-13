@@ -13,8 +13,10 @@ export const InputDate = ({
 }: InputProps) => {
   return (
     <>
-      <div className="form-group">
-        <label htmlFor={name}>{label}</label>
+      <div className="mb-3">
+        <label htmlFor={name} className="form-label">
+          {label}
+        </label>
         <input
           className="form-control"
           type="date"

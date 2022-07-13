@@ -14,16 +14,21 @@ export const ToDoList = ({
 }: ITodoProps) => {
   return (
     <>
-      <div className="col-12 col-md-8">
+      <div className="col-12 col-md-8 mt-4">
         <div className="table-responsive">
-          <table className="table table-striped table-dark table-hover">
+          <table className="table table-striped table-dark table-hover table-borderless">
             <thead>
               <tr>
                 <th scope="col">Name</th>
                 <th scope="col">End date</th>
-                <th scope="col">Urgency</th>
+                <th scope="col" className="text-center">
+                  Urgency
+                </th>
                 <th scope="col">Type</th>
-                <th scope="col">Completed</th>
+                <th scope="col" className="text-center">
+                  Completed
+                </th>
+                <th scope="col"></th>
               </tr>
             </thead>
             <tbody>

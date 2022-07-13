@@ -14,8 +14,8 @@ export const RadioGroup = ({
 }: RadioGroupProps) => {
   return (
     <>
-      <div className="form-group">
-        {label && <label>{label}</label>}
+      <div className="mb-3">
+        {label && <label className="form-label">{label}</label>}
 
         {React.Children.map(children, (child) =>
           React.cloneElement(child, {

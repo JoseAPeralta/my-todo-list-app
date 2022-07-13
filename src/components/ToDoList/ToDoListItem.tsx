@@ -32,6 +32,7 @@ export const ToDoListItem = ({
         <input
           type="checkbox"
           checked={completed}
+          className="form-check-input"
           onChange={() => handleToggleProperty(id, "completed")}
         />
       </td>
