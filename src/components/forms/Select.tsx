@@ -14,10 +14,12 @@ export const Select = ({
   const id = uuidv4();
   return (
     <>
-      <div className="form-group">
-        <label htmlFor={id}>{label}</label>
+      <div className="mb-3">
+        <label htmlFor={id} className="form-label">
+          {label}
+        </label>
         <select
-          className="custom-select"
+          className="form-select"
           id={id}
           name={name}
           value={value}

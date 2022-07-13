@@ -20,9 +20,9 @@ export const Radio = ({
 
   return (
     <>
-      <div className="custom-control custom-radio">
+      <div className="form-check">
         <input
-          className="custom-control-input"
+          className="form-check-input"
           type="radio"
           name={name}
           value={value}
@@ -30,7 +30,7 @@ export const Radio = ({
           checked={state === value}
           onChange={onInputChange}
         />
-        <label className="custom-control-label" htmlFor={id}>
+        <label className="form-check-label" htmlFor={id}>
           {children}
         </label>
       </div>
