@@ -12,7 +12,6 @@ export const ToDoList = ({
   handleToggleProperty,
   handleDeleteById,
 }: ITodoProps) => {
-  console.log(toDoList);
   return (
     <>
       <div className="col-12 col-md-8">
