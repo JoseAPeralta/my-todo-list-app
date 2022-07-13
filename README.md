@@ -1,8 +1,8 @@
 # my-todo-list-app
 
--   A todo list app make from **vanilla js**
--   Use **parcel** as a build tool
--   Use **bootstrap 4.6.0** as a CSS framework
+- A todo list app make from **React js**
+- Use **ViteJs** as a build tool
+- Use **bootstrap 4.6.0** as a CSS framework
 
 ## Install
 
@@ -25,8 +25,8 @@ or use `test:watch` to watch mode
 
 **Jose A. Peralta**
 
--   Github: [JoseAPeralta](https://github.com/JoseAPeralta)
--   Email: [japc1802@gmail.com](mailto:japc1802@gmail.com)
+- Github: [JoseAPeralta](https://github.com/JoseAPeralta)
+- Email: [japc1802@gmail.com](mailto:japc1802@gmail.com)
 
 ## License
 
