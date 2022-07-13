@@ -20,14 +20,15 @@ export const ToDoInput = ({ setTodoList }: ITodoFormProps) => {
   const { formState, onInputChange, onResetForm } = useForm(initialState);
   const { name, endDate, urgency, type } = formState;
 
-  const addTask = () => {
+  const addTask = (e: React.SyntheticEvent) => {
+    e.preventDefault();
     setTodoList((current) => [...current, formState]);
     onResetForm();
   };
   return (
     <>
-      <div className="col-12 col-md-4">
-        <form>
+      <div className="col-12 col-md-4 mt-4">
+        <form onSubmit={addTask}>
           <Input
             label={"Name"}
             name={"name"}
@@ -66,19 +67,20 @@ export const ToDoInput = ({ setTodoList }: ITodoFormProps) => {
             <option>Job</option>
           </Select>
 
-          <input
-            className="btn btn-primary btn-lg btn-block"
-            type="button"
-            value="Add task"
-            onClick={addTask}
-          />
+          <div className="d-grid gap-2">
+            <input
+              className="btn btn-primary btn-block"
+              type="submit"
+              value="Add task"
+            />
 
-          <input
-            className="btn btn-primary btn-lg btn-block"
-            type="button"
-            value="Reset form"
-            onClick={onResetForm}
-          />
+            <input
+              className="btn btn-outline-primary btn-block"
+              type="button"
+              value="Reset form"
+              onClick={onResetForm}
+            />
+          </div>
         </form>
       </div>
     </>
