@@ -2,7 +2,7 @@
 
 - A todo list app make from **React js**
 - Use **ViteJs** as a build tool
-- Use **bootstrap 4.6.0** as a CSS framework
+- Use **bootstrap 5.2.0** as a CSS framework
 
 ## Install
 
