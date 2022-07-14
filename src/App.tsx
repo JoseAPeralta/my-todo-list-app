@@ -34,12 +34,22 @@ function App() {
       <Header />
       <div className="container">
         <div className="row">
-          <ToDoInput setTodoList={setTodoList} />
-          <ToDoList
-            toDoList={toDoList}
-            handleToggleProperty={handleToggleProperty}
-            handleDeleteById={handleDeleteById}
-          />
+          <div className="col-12 col-md-4 mt-4">
+            <ToDoInput setTodoList={setTodoList} />
+          </div>
+          <div className="col-12 col-md-8 mt-4">
+            {toDoList.length >= 1 ? (
+              <ToDoList
+                toDoList={toDoList}
+                handleToggleProperty={handleToggleProperty}
+                handleDeleteById={handleDeleteById}
+              />
+            ) : (
+              <p className="text-center bg-light border fw-lighter fs-5 p-5">
+                Actually, don't have to do
+              </p>
+            )}
+          </div>
         </div>
       </div>
     </>
