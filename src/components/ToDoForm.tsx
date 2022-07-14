@@ -27,62 +27,60 @@ export const ToDoInput = ({ setTodoList }: ITodoFormProps) => {
   };
   return (
     <>
-      <div className="col-12 col-md-4 mt-4">
-        <form onSubmit={addTask}>
-          <Input
-            label={"Name"}
-            name={"name"}
-            value={name}
-            placeholder={"task name"}
-            onInputChange={onInputChange}
+      <form onSubmit={addTask}>
+        <Input
+          label={"Name"}
+          name={"name"}
+          value={name}
+          placeholder={"task name"}
+          onInputChange={onInputChange}
+        />
+
+        <InputDate
+          label={"End date"}
+          name={"endDate"}
+          min={getToday()}
+          value={endDate}
+          onInputChange={onInputChange}
+        />
+
+        <RadioGroup
+          label={"Urgency"}
+          name={"urgency"}
+          value={urgency}
+          onInputChange={onInputChange}
+        >
+          <Radio value={"More"}>More</Radio>
+          <Radio value={"Medium"}>Medium</Radio>
+          <Radio value={"Less"}>Less</Radio>
+        </RadioGroup>
+
+        <Select
+          label={"Type"}
+          name={"type"}
+          value={type}
+          onInputChange={onInputChange}
+        >
+          <option>Personal</option>
+          <option>Academic</option>
+          <option>Job</option>
+        </Select>
+
+        <div className="d-grid gap-2">
+          <input
+            className="btn btn-primary btn-block"
+            type="submit"
+            value="Add task"
           />
 
-          <InputDate
-            label={"End date"}
-            name={"endDate"}
-            min={getToday()}
-            value={endDate}
-            onInputChange={onInputChange}
+          <input
+            className="btn btn-outline-primary btn-block"
+            type="button"
+            value="Reset form"
+            onClick={onResetForm}
           />
-
-          <RadioGroup
-            label={"Urgency"}
-            name={"urgency"}
-            value={urgency}
-            onInputChange={onInputChange}
-          >
-            <Radio value={"More"}>More</Radio>
-            <Radio value={"Medium"}>Medium</Radio>
-            <Radio value={"Less"}>Less</Radio>
-          </RadioGroup>
-
-          <Select
-            label={"Type"}
-            name={"type"}
-            value={type}
-            onInputChange={onInputChange}
-          >
-            <option>Personal</option>
-            <option>Academic</option>
-            <option>Job</option>
-          </Select>
-
-          <div className="d-grid gap-2">
-            <input
-              className="btn btn-primary btn-block"
-              type="submit"
-              value="Add task"
-            />
-
-            <input
-              className="btn btn-outline-primary btn-block"
-              type="button"
-              value="Reset form"
-              onClick={onResetForm}
-            />
-          </div>
-        </form>
-      </div>
+        </div>
+      </form>
     </>
   );
 };

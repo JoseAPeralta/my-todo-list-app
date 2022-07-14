@@ -14,39 +14,34 @@ export const ToDoList = ({
 }: ITodoProps) => {
   return (
     <>
-      <div className="col-12 col-md-8 mt-4">
-        <div className="table-responsive">
-          <table className="table table-striped table-dark table-hover table-borderless">
-            <thead>
-              <tr>
-                <th scope="col">Name</th>
-                <th scope="col">End date</th>
-                <th scope="col" className="text-center">
-                  Urgency
-                </th>
-                <th scope="col">Type</th>
-                <th scope="col" className="text-center">
-                  Completed
-                </th>
-                <th scope="col"></th>
+      <div className="table-responsive">
+        <table className="table table-striped table-dark table-hover table-borderless">
+          <thead>
+            <tr>
+              <th scope="col">Name</th>
+              <th scope="col">End date</th>
+              <th scope="col" className="text-center">
+                Urgency
+              </th>
+              <th scope="col">Type</th>
+              <th scope="col" className="text-center">
+                Completed
+              </th>
+              <th scope="col"></th>
+            </tr>
+          </thead>
+          <tbody>
+            {toDoList.map((toDo) => (
+              <tr key={toDo.id} className={toDo.completed ? "text-muted" : ""}>
+                <ToDoListItem
+                  handleToggleProperty={handleToggleProperty}
+                  handleDeleteById={handleDeleteById}
+                  {...toDo}
+                />
               </tr>
-            </thead>
-            <tbody>
-              {toDoList.map((toDo) => (
-                <tr
-                  key={toDo.id}
-                  className={toDo.completed ? "text-muted" : ""}
-                >
-                  <ToDoListItem
-                    handleToggleProperty={handleToggleProperty}
-                    handleDeleteById={handleDeleteById}
-                    {...toDo}
-                  />
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
+            ))}
+          </tbody>
+        </table>
       </div>
     </>
   );
