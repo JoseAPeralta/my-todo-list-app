@@ -26,7 +26,7 @@ or use `test:watch` to watch mode
 **Jose A. Peralta**
 
 - Github: [JoseAPeralta](https://github.com/JoseAPeralta)
-- Email: [japc1802@gmail.com](mailto:japc1802@gmail.com)
+- Email: [jperalta3004@gmail.com](mailto:jperalta3004@gmail.com)
 
 ## License
 
